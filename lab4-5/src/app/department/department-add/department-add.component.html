@@ -1,0 +1,20 @@
+<div class=" card-body ">
+  <form #dept="ngForm">
+  <div class="form-control">
+    <input  [(ngModel)]="department.id" #id="ngModel" type="text" required placeholder="enter id" name="id">
+    <p *ngIf="id.errors?.['required']"> id is required</p>
+  </div>
+  <div class="form-control">
+    <input  [(ngModel)]="department.deptName" #name="ngModel" type="text"  required placeholder="enter  department name" name="name">
+    <p *ngIf="name.errors?.['required']&& name.touched"> name is required</p>
+  </div>
+  <div class="form-control">
+    <input  #loc type="text" placeholder="enter location" >
+  </div>
+
+
+  <div>
+    <button  class="btn btn-primary mt-2"(click)="add(id.value,name.value,loc.value)" [disabled]="dept.invalid" >create </button>
+  </div>
+  </form>
+</div>

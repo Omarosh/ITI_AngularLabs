@@ -1,0 +1,10 @@
+h1 {
+  color: red;
+}
+.details {
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  width: 20%;
+  height: auto;
+}
